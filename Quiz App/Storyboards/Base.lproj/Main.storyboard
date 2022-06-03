@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroViewController" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
         <!--Question № -->
         <scene sceneID="pro-PE-3mo">
             <objects>
-                <viewController id="qGK-89-7vf" sceneMemberID="viewController">
+                <viewController id="qGK-89-7vf" customClass="QueastionsViewController" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TpA-bn-sLG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,7 +350,7 @@
         <!--Results-->
         <scene sceneID="gVL-uA-JTt">
             <objects>
-                <viewController id="qpW-o3-jHC" sceneMemberID="viewController">
+                <viewController id="qpW-o3-jHC" customClass="ResultViewController" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jJ3-PS-Xtd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -408,10 +408,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="kYd-sk-DB9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Z63-LS-MUN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Z63-LS-MUN">
+                            <connections>
+                                <segue destination="D6H-A0-fzO" kind="unwind" unwindAction="unwindFor:" id="JYq-zA-ijR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsV-WL-AgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="D6H-A0-fzO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2094" y="65"/>
         </scene>
