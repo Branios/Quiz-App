@@ -334,12 +334,6 @@
                             </constraint>
                             <constraint firstItem="Nox-KJ-O9q" firstAttribute="leading" secondItem="dIg-ze-mS6" secondAttribute="leading" constant="20" id="pYX-Kc-Pb6"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="844-hf-vNg"/>
-                                <exclude reference="Nox-KJ-O9q"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Question № " id="4z3-Vh-BAh">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="etP-KS-Pqm">
@@ -353,6 +347,7 @@
                         <outlet property="queastionText" destination="HW6-YI-rcb" id="5PM-cu-uit"/>
                         <outlet property="questionProgress" destination="0qZ-Z3-SZ4" id="6Sv-Jd-VQR"/>
                         <outlet property="rangedSlider" destination="PFn-4W-VUw" id="txe-QP-azS"/>
+                        <outlet property="rangedStackView" destination="lnY-A6-b13" id="khR-Y6-ylk"/>
                         <outlet property="singleStackView" destination="844-hf-vNg" id="FMV-og-gtW"/>
                         <outletCollection property="multipleAnswerTexts" destination="VdC-TQ-nTu" collectionClass="NSMutableArray" id="OJH-U1-zao"/>
                         <outletCollection property="multipleAnswerTexts" destination="vvL-Ji-eOu" collectionClass="NSMutableArray" id="2yi-TR-UkI"/>
