@@ -87,8 +87,8 @@ extension QueastionsViewController {
     private func showCurrentAnswers(for type: ResponseType) {
         switch type {
         case .single: showSingleStackView(with: currentAnswers)
-        case .multiple: break
-        case .ranged: break
+        case .multiple: showMultipleStackView(with: currentAnswers)
+        case .ranged: showRangedStackView(with: currentAnswers)
         }
     }
     
@@ -99,6 +99,21 @@ extension QueastionsViewController {
             button.setTitle(answer.title, for: .normal)
         }
         
+    }
+    
+    private func showMultipleStackView(with answers: [Answer]) {
+        multipleStackView.isHidden.toggle()
+        
+        for(label, answer) in zip(multipleAnswerTexts, answers) {
+            label.text = answer.title
+        }
+    }
+    
+    private func showRangedStackView(with answers: [Answer]){
+        rangedStackView.isHidden.toggle()
+        
+        rangedAnswerTexts.first?.text = answers.first?.title
+        rangedAnswerTexts.last?.text = answers.last?.title
     }
     
     private func nextQuestion() {
