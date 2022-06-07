@@ -53,6 +53,9 @@ class QueastionsViewController: UIViewController {
     }
     
     @IBAction func rangedAnswerButtonPressed() {
+        let index = lrintf(rangedSlider.value)
+        answersChosen.append(currentAnswers[index])
+        nextQuestion()
     }
 }
 
