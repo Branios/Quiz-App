@@ -447,6 +447,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="animalDescription" destination="G4h-4K-Lkn" id="r7v-Rj-72w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsV-WL-AgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="D6H-A0-fzO" userLabel="Exit" sceneMemberID="exit"/>
