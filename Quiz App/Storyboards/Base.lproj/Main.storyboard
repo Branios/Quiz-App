@@ -145,6 +145,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button" buttonSize="large" titleAlignment="center"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="qGK-89-7vf" eventType="touchUpInside" id="cSh-ua-SA3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOm-3a-b1L">
                                         <rect key="frame" x="91" y="126" width="200" height="45"/>
@@ -154,6 +157,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button" buttonSize="large" titleAlignment="center"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="qGK-89-7vf" eventType="touchUpInside" id="V1A-RD-Rbw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ky-9B-e1B">
                                         <rect key="frame" x="91" y="189" width="200" height="45"/>
@@ -163,6 +169,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button" buttonSize="large" titleAlignment="center"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="qGK-89-7vf" eventType="touchUpInside" id="j7g-7Q-7zt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
@@ -236,6 +245,7 @@
                                             <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="qGK-89-7vf" eventType="touchUpInside" id="D5V-Xm-J6a"/>
                                             <action selector="multipleAnswerButtonPressed:" destination="qGK-89-7vf" eventType="touchUpInside" id="r0h-7O-vMI"/>
                                         </connections>
                                     </button>
@@ -284,7 +294,7 @@
                                                     <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="rangedAnswerButtonPressed:" destination="qGK-89-7vf" eventType="touchUpInside" id="wtM-A4-mne"/>
+                                                    <action selector="rangedAnswerButtonPressed" destination="qGK-89-7vf" eventType="touchUpInside" id="dgl-lt-nd4"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -334,6 +344,12 @@
                             </constraint>
                             <constraint firstItem="Nox-KJ-O9q" firstAttribute="leading" secondItem="dIg-ze-mS6" secondAttribute="leading" constant="20" id="pYX-Kc-Pb6"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="844-hf-vNg"/>
+                                <exclude reference="Nox-KJ-O9q"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Question № " id="4z3-Vh-BAh">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="etP-KS-Pqm">

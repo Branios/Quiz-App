@@ -44,6 +44,12 @@ class QueastionsViewController: UIViewController {
     
     
     @IBAction func multipleAnswerButtonPressed() {
+        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
+            if multipleSwitch.isOn {
+                answersChosen.append(answer)
+            }
+        }
+        nextQuestion()
     }
     
     @IBAction func rangedAnswerButtonPressed() {
