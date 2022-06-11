@@ -18,6 +18,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
+        showResult()
 
     }
     
@@ -27,7 +28,9 @@ class ResultViewController: UIViewController {
         
             
         }
-}
+    }
+
+
     
 
 
