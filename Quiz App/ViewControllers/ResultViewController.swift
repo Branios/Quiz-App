@@ -18,21 +18,21 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
-        showResult(with: <#Animal?#>)
-
+        filteringAnimal()
     }
     
     private func filteringAnimal() {
-        let selectedAnimal = Dictionary(grouping: answersInModel, by: { $0.animal })
-        selectedAnimal.sorted({$0 > $1})
-        selectedAnimal.first?.key
-        }
+        let selectedAnimal = Dictionary(grouping: answersInModel) { $0.animal }
+            .max{$0.value.count > $1.value.count}?.key
+        
+        showResult(with: selectedAnimal)
     }
 
     private func showResult(with animal: Animal?) {
-        resultAnimal.text = "Looks like you're a \(animal)!"
+        resultAnimal.text = "Looks like you're a \(animal?.rawValue ?? "🐶")!"
         animalDescription.text = animal?.definition ?? ""
     }
+}
 
 
 
